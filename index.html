@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Let's play</title>
+<link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+<style>
+.button {
+   
+    width:100px;
+    height:100px;
+    border: black;
+   border-style: solid;
+    color: white;
+    box-shadow: 1px 1px 2px black, 0 0 25px orange, 0 0 5px ;
+   
+    text-align: center;
+    text-decoration: none;
+    
+    font-size: 75px;
+    color:white;
+    text-align:center;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.score{     margin: auto;
+    background-color:#b642f4;
+    width:60%;
+    
+    border: black;
+   border-style: solid;
+    color: white;
+    box-shadow: 1px 1px 2px black, 0 0 25px orange, 0 0 5px ;
+   
+    text-align: center;
+    text-decoration: none;
+    
+    font-size: 40px;
+    color:white;
+    text-align:center;
+    
+   
+
+     }
+.heading{ margin: auto;
+	 background-color:#d16f2e;
+    width:80%;
+    
+    border: black;
+   border-style: solid;
+    color: white;
+    box-shadow: 1px 1px 2px black, 0 0 25px #6d4b0d, 0 0 5px ;
+   
+    text-align: center;
+    text-decoration: none;
+    
+    font-size: 60px;
+    color:white;
+    text-align:center;
+}
+	  
+
+</style>
+
+
+<script>
+var i=0;
+var previd=0;
+var compare;
+var flag=0;
+var score=0;
+var arr=["B","H","C","G","E","A","D","F","C","B","F","A","D","E","H","G"];
+var ids=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+function repeat(x){var jhanda=0;
+
+ 		   for(var i=0;i<16;i++)
+                    {if(x==arr[i])
+                      { jhanda=1;
+		      }
+                    }
+                      return jhanda;
+                   }
+function myFunction(x) {if(repeat(x))
+    {
+    }
+
+else{
+   i++;
+ if(previd!=x)
+  {
+   flag=previd;
+   previd=x;
+                          
+                         
+    
+    if(i%2!=0)
+  {
+    document.getElementById(x).innerHTML = arr[x-1];
+    compare=arr[x-1];
+    
+  }
+    else if(i%2==0)
+  { document.getElementById(x).innerHTML = arr[x-1];
+    if(compare==arr[x-1])
+     {document.getElementById(x).innerHTML = arr[x-1];
+      arr[x-1]=x;
+      arr[flag-1]=flag;
+       setTimeout(my,300);
+       function my(){
+        document.getElementById(x).innerHTML = "+";
+        document.getElementById(flag).innerHTML = "+";
+        document.getElementById(x).style.backgroundColor="blue";
+        document.getElementById(flag).style.backgroundColor="blue";
+	score=score+20;
+	document.getElementById(20).innerHTML = "SCORE:"+score;
+           }
+      
+     }
+    else
+     { setTimeout(myTimer,300);
+       function myTimer(){
+        document.getElementById(x).innerHTML = "~";
+        document.getElementById(flag).innerHTML = "~";
+        score=score-5;
+	document.getElementById(20).innerHTML = "SCORE:"+score;
+        
+        
+           }
+      }
+  }
+ }
+else
+{    if(i%2!=0)
+  {
+    document.getElementById(x).innerHTML = arr[x-1];
+    
+    
+  }      
+      else
+   { document.getElementById(x).innerHTML = "~";}
+ }
+}
+}    
+</script>
+</head>
+
+
+<body style="text-align:center; background-image: url('giphy.gif'); " >
+
+<h1 class="heading" >Time to Get schwifty boiz</h1>
+<br><br>
+<h2 class="score" id=20> SCORE:0 </h2><br><br>
+<button class="button" id=1 style=" background-color: #ff0000;" onClick="myFunction(1)">~</button>
+<button class="button" id=2 style=" background-color: #ff0000;" onClick="myFunction(2)">~</button>
+<button class="button" id=3 style=" background-color: #ff0000;" onClick="myFunction(3)">~</button>
+<button class="button" id=4 style=" background-color: #ff0000;" onClick="myFunction(4)">~</button>
+<br>
+<button class="button" id=5 style=" background-color: #ff0000;" onClick="myFunction(5)">~</button>
+<button class="button" id=6 style=" background-color: #ff0000;" onClick="myFunction(6)">~</button>
+<button class="button" id=7 style=" background-color: #ff0000;" onClick="myFunction(7)">~</button>
+<button class="button" id=8 style=" background-color: #ff0000;" onClick="myFunction(8)">~</button>
+<br>
+<button class="button" id=9 style=" background-color: #ff0000;" onClick="myFunction(9)">~</button>
+<button class="button" id=10 style=" background-color: #ff0000;" onClick="myFunction(10)">~</button>
+<button class="button" id=11 style=" background-color: #ff0000;" onClick="myFunction(11)">~</button>
+<button class="button" id=12 style=" background-color: #ff0000;" onClick="myFunction(12)">~</button>
+<br>
+<button class="button" id=13 style=" background-color: #ff0000;" onClick="myFunction(13)">~</button>
+<button class="button" id=14 style=" background-color: #ff0000;" onClick="myFunction(14)">~</button>
+<button class="button" id=15 style=" background-color: #ff0000;" onClick="myFunction(15)">~</button>
+<button class="button" id=16 style=" background-color: #ff0000;" onClick="myFunction(16)">~</button>
+<br>
+
+</body>
+</html>
+
