@@ -67,6 +67,7 @@ var i=0;
 var previd=0;
 var compare;
 var flag=0;
+var count=0;
 var score=0;
 var arr=["B","H","C","G","E","A","D","F","C","B","F","A","D","E","H","G"];
 var ids=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
@@ -104,6 +105,7 @@ else{
      {document.getElementById(x).innerHTML = arr[x-1];
       arr[x-1]=x;
       arr[flag-1]=flag;
+      count++;
        setTimeout(my,300);
        function my(){
         document.getElementById(x).innerHTML = "+";
@@ -112,6 +114,13 @@ else{
         document.getElementById(flag).style.backgroundColor="blue";
 	score=score+20;
 	document.getElementById(20).innerHTML = "SCORE:"+score;
+         if(count==8)
+         {if (confirm("WELL DONE , Your score is : "+score+". Want to play again?") == true) {
+            location.reload();
+         } else { close();
+           
+         }
+          }
            }
       
      }
@@ -172,4 +181,3 @@ else
 
 </body>
 </html>
-
