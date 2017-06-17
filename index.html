@@ -5,58 +5,80 @@
 <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
 <style>
 .button {
-   
+   background-color: #ffff00;
     width:100px;
     height:100px;
     border: black;
    border-style: solid;
     color: white;
-    box-shadow: 1px 1px 2px black, 0 0 25px orange, 0 0 5px ;
+    box-shadow: 1px 1px 2px black, 10 10 25px orange, 0 0 5px ;
+    
    
     text-align: center;
     text-decoration: none;
     
     font-size: 75px;
-    color:white;
+    color:black;
     text-align:center;
     margin: 4px 2px;
     cursor: pointer;
 }
 .score{     margin: auto;
-    background-color:#b642f4;
-    width:60%;
+    background-color:black;
+    width:20%;
     
-    border: black;
+    border: #ffff00;
    border-style: solid;
-    color: white;
-    box-shadow: 1px 1px 2px black, 0 0 25px orange, 0 0 5px ;
+    color: #ffff00;
+    box-shadow: 1px 1px 2px black, 0 0 25px #d986f9, 0 0 5px ;
    
     text-align: center;
     text-decoration: none;
     
-    font-size: 40px;
-    color:white;
+    font-size: 25px;
+    color:#ffff00;
     text-align:center;
     
    
 
      }
 .heading{ margin: auto;
-	 background-color:#d16f2e;
-    width:80%;
+	 background-color:black;
+    width:70%;
     
-    border: black;
+    border: #ffff00;
    border-style: solid;
-    color: white;
+    color: #ffff00;
     box-shadow: 1px 1px 2px black, 0 0 25px #6d4b0d, 0 0 5px ;
    
     text-align: center;
     text-decoration: none;
     
-    font-size: 60px;
-    color:white;
+    font-size: 30px;
+    color:#ffff00;
     text-align:center;
 }
+.instructions{
+    margin:auto;
+    width:13%;
+   background-color:#ffff00;
+   
+    border: black;
+   border-style: solid;
+    color: black;
+    box-shadow: 1px 1px 2px black, 10 10 25px orange, 0 0 5px ;
+    
+   
+    text-align: center;
+    text-decoration: none;
+    
+    font-size: 20px;
+    color:black;
+    text-align:center;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+            
 	  
 
 </style>
@@ -148,7 +170,10 @@ else
    { document.getElementById(x).innerHTML = "~";}
  }
 }
-}    
+}   
+
+function instructions(a) { alert(" • Click on the box to view what it contains\n \n • You can view two boxes at a time.\n \n • Aim of the game is to match the alphabets in pairs of two.\n \n •  Every correct match gives you +20 and incorrect match gives -5.");
+                         }
 </script>
 </head>
 
@@ -157,27 +182,29 @@ else
 
 <h1 class="heading" >Time to Get schwifty boiz</h1>
 <br><br>
-<h2 class="score" id=20> SCORE:0 </h2><br><br>
-<button class="button" id=1 style=" background-color: #ff0000;" onClick="myFunction(1)">~</button>
-<button class="button" id=2 style=" background-color: #ff0000;" onClick="myFunction(2)">~</button>
-<button class="button" id=3 style=" background-color: #ff0000;" onClick="myFunction(3)">~</button>
-<button class="button" id=4 style=" background-color: #ff0000;" onClick="myFunction(4)">~</button>
+<button class="button" id=1  onClick="myFunction(1)">~</button>
+<button class="button" id=2  onClick="myFunction(2)">~</button>
+<button class="button" id=3  onClick="myFunction(3)">~</button>
+<button class="button" id=4  onClick="myFunction(4)">~</button>
 <br>
-<button class="button" id=5 style=" background-color: #ff0000;" onClick="myFunction(5)">~</button>
-<button class="button" id=6 style=" background-color: #ff0000;" onClick="myFunction(6)">~</button>
-<button class="button" id=7 style=" background-color: #ff0000;" onClick="myFunction(7)">~</button>
-<button class="button" id=8 style=" background-color: #ff0000;" onClick="myFunction(8)">~</button>
+<button class="button" id=5  onClick="myFunction(5)">~</button>
+<button class="button" id=6  onClick="myFunction(6)">~</button>
+<button class="button" id=7  onClick="myFunction(7)">~</button>
+<button class="button" id=8  onClick="myFunction(8)">~</button>
 <br>
-<button class="button" id=9 style=" background-color: #ff0000;" onClick="myFunction(9)">~</button>
-<button class="button" id=10 style=" background-color: #ff0000;" onClick="myFunction(10)">~</button>
-<button class="button" id=11 style=" background-color: #ff0000;" onClick="myFunction(11)">~</button>
-<button class="button" id=12 style=" background-color: #ff0000;" onClick="myFunction(12)">~</button>
+<button class="button" id=9  onClick="myFunction(9)">~</button>
+<button class="button" id=10 onClick="myFunction(10)">~</button>
+<button class="button" id=11 onClick="myFunction(11)">~</button>
+<button class="button" id=12 onClick="myFunction(12)">~</button>
 <br>
-<button class="button" id=13 style=" background-color: #ff0000;" onClick="myFunction(13)">~</button>
-<button class="button" id=14 style=" background-color: #ff0000;" onClick="myFunction(14)">~</button>
-<button class="button" id=15 style=" background-color: #ff0000;" onClick="myFunction(15)">~</button>
-<button class="button" id=16 style=" background-color: #ff0000;" onClick="myFunction(16)">~</button>
-<br>
+<button class="button" id=13  onClick="myFunction(13)">~</button>
+<button class="button" id=14  onClick="myFunction(14)">~</button>
+<button class="button" id=15  onClick="myFunction(15)">~</button>
+<button class="button" id=16  onClick="myFunction(16)">~</button>
+<br><br>
+<button class="instructions" id=21  onClick="instructions(21)"> <b>Click for instruction.</b></button>
+<br><br>
+<h2 class="score" id=20> <b>SCORE:0 <b></h2><br><br>
 
 </body>
 </html>
